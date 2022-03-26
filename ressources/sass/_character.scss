@@ -1,0 +1,66 @@
+.character{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    &__div{
+        display: flex;
+        padding: 1rem 0;
+        background-color: #363333;
+        max-width: 20rem;
+        margin: 2rem;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5%;
+        color: white;
+        box-shadow: rgba(1, 0, 0, 1) 0px 3px 8px;
+        position: relative;
+    }
+    &__a{
+        text-decoration: none;
+        color: rgb(253, 253, 253);
+        font-size: 1.4rem;
+        border: 1px solid white;
+        padding: 0.4rem;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: absolute;
+        bottom: 25px;
+    }
+    &__h2{
+        font-size: 1.8rem;
+    }
+    
+    &__p{
+        font-size: 1.4rem;
+        margin: 1rem 2rem 8rem 2rem;
+        font-weight: 200;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        max-height: 7rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: justify;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+    &__img{
+        border-radius: 100%;
+        width: 10rem;
+    }
+}
+@media screen and (min-width: 767px){
+    .character{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1024px){
+    .character{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 1440px){
+    .character{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

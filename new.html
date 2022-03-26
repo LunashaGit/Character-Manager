@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Manager</title>
+    <link href="./ressources/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./ressources/css/toolbar.css" type="text/css" />
+</head>
+<body>
+    <main class="main">
+        <section class="main__section section top">
+            <h1 class="top__h1">New Character</h1>
+        </section>
+        <div class="top__div"></div>
+        <section class="main__section section new">
+            <h2 class="new__h2">Character : New</h2>
+            <form class="new__form" method="POST" id="form">
+                <div class="new__div new__div--top">
+                    <img id="blah" />
+                    <input id="image" type="file" class="input" id="browse" value="">
+                </div>
+                <div class="new__div new__div--form">
+                    <label for="name" class="label">Name :</label>
+                    <input id="name" type="text" class="input" placeholder="Name:" value="" autocomplete="off">
+                    <label for="shortdescription" class="label">Short description :</label>
+                    <input id="shortDescription" type="text" class="input" placeholder="Short Description:" value="" autocomplete="off">
+                    <label for="description" class="label">Description :</label>
+                    <textarea id="description" type="text" class="input" placeholder="Description:" autocomplete="off"></textarea>
+                    </div>
+                <div class="new__div new__div--butt">
+                    <button id="submit">Saves Changes</button>
+                    <a class="form" id="submit" type="submit" class="submit" href="index.html">Home</button>
+                </div>
+            </form>
+        </section>  
+    </main>
+    <script src="./ressources/js/newCharacter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/commonmark/0.28.1/commonmark.min.js"></script>
+    <script src="./ressources/js/toolbar.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#description').markdownToolbar();
+        });
+    </script>
+</body>
+</html>

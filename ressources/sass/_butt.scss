@@ -1,0 +1,19 @@
+.butt{
+    margin: 5rem;
+    &__a{
+        color:white;
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        background-color: blue;
+        border-radius: 15px;
+        box-shadow: rgb(88, 56, 228) 2px 2px 2px;
+    }
+}
+@media screen and (min-width: 768px){
+    .butt{
+        &__a{
+            padding: 1rem 20rem;
+        }
+    }
+}

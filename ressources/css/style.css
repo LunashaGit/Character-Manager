@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: "Roboto";
+  color: white;
+}
+
+h1, h2, h3, h5 {
+  font-family: "Permanent Marker", cursive;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+  background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.character__div {
+  display: flex;
+  padding: 1rem 0;
+  background-color: #363333;
+  max-width: 20rem;
+  margin: 2rem;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5%;
+  color: white;
+  box-shadow: #010000 0px 3px 8px;
+  position: relative;
+}
+.character__a {
+  text-decoration: none;
+  color: #fdfdfd;
+  font-size: 1.4rem;
+  border: 1px solid white;
+  padding: 0.4rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  bottom: 25px;
+}
+.character__h2 {
+  font-size: 1.8rem;
+}
+.character__p {
+  font-size: 1.4rem;
+  margin: 1rem 2rem 8rem 2rem;
+  font-weight: 200;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-height: 7rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: justify;
+}
+.character p {
+  font-size: 1.4rem;
+}
+.character__img {
+  border-radius: 100%;
+  width: 10rem;
+}
+
+@media screen and (min-width: 767px) {
+  .character {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .character {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .character {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+.top__h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2rem;
+  color: white;
+}
+.top__input {
+  height: 2rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  color: black;
+  border: 1px solid grey;
+}
+.top__input:focus {
+  outline: none;
+}
+.top__div {
+  border: 1px solid #FFF;
+  width: 30rem;
+  margin: 2rem 0rem;
+}
+
+@media screen and (min-width: 767px) {
+  .top {
+    flex-direction: row;
+  }
+  .top__h1 {
+    font-size: 3rem;
+    margin: 0 2rem;
+  }
+  .top__input {
+    margin: 0 2rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+  .top__input:focus {
+    outline: none;
+  }
+  .top__div {
+    width: 70rem;
+  }
+}
+.butt {
+  margin: 5rem;
+}
+.butt__a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: blue;
+  border-radius: 15px;
+  box-shadow: #5838e4 2px 2px 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .butt__a {
+    padding: 1rem 20rem;
+  }
+}
+.single__h2 {
+  font-size: 2rem;
+}
+.single__h5 {
+  font-size: 1.2rem;
+}
+.single__p {
+  font-size: 2rem;
+  text-align: justify;
+}
+
+#delete {
+  border: 2px solid red;
+}
+
+.new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #363333;
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 15px;
+  max-width: 25rem;
+  text-align: center;
+}
+.new__h2 {
+  font-size: 2.4rem;
+  color: white;
+}
+.new img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  border: 1px solid white;
+  margin: 1rem;
+}
+.new__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new__form img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  border: 1px solid white;
+  margin: 1rem;
+}
+.new__div--top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new__div--top input {
+  font-size: 1.2rem;
+}
+.new__div--form {
+  display: flex;
+  flex-direction: column;
+}
+.new__div--form label {
+  font-size: 1.8rem;
+}
+.new__div--form #name {
+  font-family: "Permanent Marker", cursive;
+}
+.new__div--form #shortDescription {
+  font-style: italic;
+  color: grey;
+}
+.new__div--form input, .new__div--form textarea {
+  font-size: 1.6rem;
+  border-radius: 10px;
+  border: 0;
+  padding: 1rem;
+  background-color: #303030;
+  border: 1px solid white;
+}
+.new__div--form input:focus, .new__div--form textarea:focus {
+  outline: none;
+}
+.new__div--form .markdown-preview {
+  display: none;
+}
+.new__div--butt {
+  display: flex;
+  flex-direction: column;
+}
+.new__div--butt * {
+  margin: 1rem 1rem;
+}
+.new__div--butt button {
+  font-size: 1.6rem;
+  color: White;
+  background-color: #4B7CFB;
+  border: 2px solid #4B7CFB;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+.new__div--butt #delete {
+  background: none;
+  color: red;
+}
+.new__div--butt a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #4B7CFB;
+  background: #2b2a2a;
+  padding: 1rem 2rem;
+  border: 2px solid #4B7CFB;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 767px) {
+  .new {
+    min-width: 60rem;
+  }
+  .new__div--butt {
+    margin: 0;
+    flex-direction: row;
+  }
+  .new #image {
+    width: 10.5rem;
+  }
+  .new input, .new textarea {
+    width: 55rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

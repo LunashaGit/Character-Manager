@@ -1,0 +1,16 @@
+.single{
+    &__h2{
+        font-size: 2rem;
+    }
+    &__h5{
+        font-size: 1.2rem;
+    }
+    &__p{
+        font-size: 2rem;
+        text-align: justify;
+    }
+    
+}
+#delete{
+    border: 2px solid red;
+}
